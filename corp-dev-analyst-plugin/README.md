@@ -22,11 +22,33 @@ Corporate development analyst plugin for Claude Code. Provides the `corp-dev-ana
 
 ## Installation
 
+**Step 1 — Add the marketplace** (one-time per machine):
+
 ```bash
-cc --plugin-dir /path/to/corp-dev-analyst-plugin
+/plugin marketplace add jamesjwhan/corp-dev-plugins
 ```
 
-Or copy to your project's `.claude-plugin/` directory for project-scoped use.
+> Use the `owner/repo` shorthand — not the full `https://github.com/...` URL.
+
+**Step 2 — Install this plugin:**
+
+```bash
+/plugin install corp-dev-analyst@corp-dev-plugins
+```
+
+**Step 3 — Reload plugins in the current session:**
+
+```bash
+/reload-plugins
+```
+
+### Team / project scope
+
+To share across your whole repo (adds to `.claude/settings.json`):
+
+```bash
+/plugin install corp-dev-analyst@corp-dev-plugins --scope project
+```
 
 ## Prerequisites
 
