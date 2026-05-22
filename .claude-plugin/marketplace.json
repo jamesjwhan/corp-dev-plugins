@@ -13,12 +13,7 @@
       "author": {
         "name": "James Han"
       },
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/jamesjwhan/corp-dev-plugins.git",
-        "path": "corp-dev-analyst-plugin",
-        "ref": "main"
-      }
+      "source": "./corp-dev-analyst-plugin"
     },
     {
       "name": "corpdev-crm",
@@ -26,12 +21,7 @@
       "author": {
         "name": "James Han"
       },
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/jamesjwhan/corp-dev-plugins.git",
-        "path": "corpdev-crm-plugin",
-        "ref": "main"
-      }
+      "source": "./corpdev-crm-plugin"
     }
   ]
 }
