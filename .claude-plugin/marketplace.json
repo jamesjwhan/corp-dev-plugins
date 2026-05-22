@@ -1,6 +1,7 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "corp-dev-plugins",
-  "description": "Corp dev plugins for M&A and CRM workflows",
+  "description": "Toast CorpDev plugin suite: M&A research, deal memos, financial diligence, and CRM pipeline workflows.",
   "owner": {
     "name": "James Han",
     "email": "james.jw.han@gmail.com"
@@ -8,13 +9,29 @@
   "plugins": [
     {
       "name": "corp-dev-analyst",
-      "description": "Corp dev analyst toolkit: deep-dive research, sector briefs, deal memos, earnings analysis, financial diligence, cap table modeling, data room review, and daily intelligence briefings.",
-      "source": "./corp-dev-analyst-plugin"
+      "description": "Corporate development analyst toolkit: deep-dive research, sector briefs, deal memos, earnings analysis, financial diligence, cap table modeling, data room review, and daily intelligence briefings.",
+      "author": {
+        "name": "James Han"
+      },
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jamesjwhan/corp-dev-plugins.git",
+        "path": "corp-dev-analyst-plugin",
+        "ref": "main"
+      }
     },
     {
       "name": "corpdev-crm",
       "description": "CorpDev CRM workflow toolkit: full pipeline orchestration, signal monitoring, deal sourcing, company enrichment, startup meeting management, and Notion CRM writes.",
-      "source": "./corpdev-crm-plugin"
+      "author": {
+        "name": "James Han"
+      },
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jamesjwhan/corp-dev-plugins.git",
+        "path": "corpdev-crm-plugin",
+        "ref": "main"
+      }
     }
   ]
 }
