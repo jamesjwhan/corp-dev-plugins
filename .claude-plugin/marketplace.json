@@ -1,0 +1,20 @@
+{
+  "name": "corp-dev-plugins",
+  "description": "Corp dev plugins for M&A and CRM workflows",
+  "owner": {
+    "name": "James Han",
+    "email": "james.jw.han@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "corp-dev-analyst",
+      "description": "Corp dev analyst toolkit: deep-dive research, sector briefs, deal memos, earnings analysis, financial diligence, cap table modeling, data room review, and daily intelligence briefings.",
+      "source": "./corp-dev-analyst-plugin"
+    },
+    {
+      "name": "corpdev-crm",
+      "description": "CorpDev CRM workflow toolkit: full pipeline orchestration, signal monitoring, deal sourcing, company enrichment, startup meeting management, and Notion CRM writes.",
+      "source": "./corpdev-crm-plugin"
+    }
+  ]
+}

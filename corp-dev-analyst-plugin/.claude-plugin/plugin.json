@@ -1,0 +1,10 @@
+{
+  "name": "corp-dev-analyst",
+  "version": "0.1.0",
+  "description": "Corporate development analyst toolkit: deep-dive research, sector briefs, deal memos, earnings analysis, financial diligence, cap table modeling, data room review, and daily intelligence briefings.",
+  "author": {
+    "name": "James Han",
+    "email": "james.han@toasttab.com"
+  },
+  "keywords": ["corp-dev", "m&a", "research", "deal-memo", "diligence", "sector-research"]
+}

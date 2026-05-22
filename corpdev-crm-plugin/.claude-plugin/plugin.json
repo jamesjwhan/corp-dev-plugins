@@ -1,0 +1,10 @@
+{
+  "name": "corpdev-crm",
+  "version": "0.1.0",
+  "description": "CorpDev CRM workflow toolkit: full pipeline orchestration, signal monitoring, deal sourcing, company enrichment, startup meeting management, and Notion CRM writes.",
+  "author": {
+    "name": "James Han",
+    "email": "james.han@toasttab.com"
+  },
+  "keywords": ["corp-dev", "crm", "pipeline", "notion", "signals", "sourcing"]
+}
