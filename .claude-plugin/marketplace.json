@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "corp-dev-plugins",
-  "description": "Toast CorpDev plugin suite: M&A research, deal memos, financial diligence, and CRM pipeline workflows.",
+  "description": "Toast CorpDev plugin suite: M&A research, deal memos, financial diligence, CRM pipeline, and deal execution workflows.",
   "owner": {
     "name": "James Han",
     "email": "james.jw.han@gmail.com"
@@ -16,7 +16,7 @@
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/jamesjwhan/corp-dev-plugins.git",
-        "path": "corp-dev-analyst-plugin"
+        "path": "corpdev-analyst-plugin"
       }
     },
     {
@@ -29,6 +29,18 @@
         "source": "git-subdir",
         "url": "https://github.com/jamesjwhan/corp-dev-plugins.git",
         "path": "corpdev-crm-plugin"
+      }
+    },
+    {
+      "name": "corpdev-execution",
+      "description": "Deal execution and integration toolkit: confirmatory diligence planning and coordination, sign-to-close planning, deal comms runbook, and post-close integration planning and OKR tracking.",
+      "author": {
+        "name": "James Han"
+      },
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jamesjwhan/corp-dev-plugins.git",
+        "path": "corpdev-execution-plugin"
       }
     }
   ]

@@ -1,0 +1,10 @@
+{
+  "name": "corpdev-execution",
+  "version": "0.1.0",
+  "description": "Deal execution and integration toolkit: confirmatory diligence planning and coordination, sign-to-close planning, deal comms runbook, and post-close integration planning and OKR tracking.",
+  "author": {
+    "name": "James Han",
+    "email": "james.han@toasttab.com"
+  },
+  "keywords": ["corp-dev", "m&a", "diligence", "closing", "integration", "deal-execution"]
+}

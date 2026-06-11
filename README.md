@@ -1,13 +1,14 @@
 # corp-dev-plugins
 
-Toast CorpDev plugin suite for Claude Code — M&A research, deal memos, financial diligence, and CRM pipeline workflows.
+Toast CorpDev plugin suite for Claude Code — M&A research, deal memos, financial diligence, CRM pipeline, and deal execution workflows.
 
 ## Plugins
 
 | Plugin | Description |
 |---|---|
-| [`corp-dev-analyst`](corp-dev-analyst-plugin/) | Senior corp dev analyst: deep-dive research, sector briefs, deal memos, earnings analysis, financial diligence, cap table modeling, data room review, daily briefings |
+| [`corp-dev-analyst`](corpdev-analyst-plugin/) | Senior corp dev analyst: deep-dive research, sector briefs, deal memos, earnings analysis, financial diligence, cap table modeling, data room review, daily briefings |
 | [`corpdev-crm`](corpdev-crm-plugin/) | CRM pipeline orchestration: signal monitoring, deal sourcing, company enrichment, startup meeting management, Notion CRM writes |
+| [`corpdev-execution`](corpdev-execution-plugin/) | Deal execution and integration: confirmatory diligence planning and coordination, sign-to-close planning, deal comms runbook, post-close integration planning and OKR tracking |
 
 ## Installation
 
@@ -24,6 +25,7 @@ Toast CorpDev plugin suite for Claude Code — M&A research, deal memos, financi
 ```bash
 /plugin install corp-dev-analyst@corp-dev-plugins
 /plugin install corpdev-crm@corp-dev-plugins
+/plugin install corpdev-execution@corp-dev-plugins
 ```
 
 ### Step 3 — Reload
@@ -39,6 +41,7 @@ To install for everyone on a project (written to `.claude/settings.json`):
 ```bash
 /plugin install corp-dev-analyst@corp-dev-plugins --scope project
 /plugin install corpdev-crm@corp-dev-plugins --scope project
+/plugin install corpdev-execution@corp-dev-plugins --scope project
 ```
 
 ### Keeping up to date
