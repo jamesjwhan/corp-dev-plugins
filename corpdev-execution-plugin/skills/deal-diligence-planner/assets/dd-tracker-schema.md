@@ -1,8 +1,7 @@
 # Asset — Diligence Status Tracker (Google Sheet schema)
 
-The `deal-diligence-planner` **drafts content against this schema and asks the human to approve
-creating the sheet** — it does not create it in Corp Dev Spaces / Drive on its own. Once approved and
-created, `diligence-coordinator` runs it. Mirrors the closing-planner's CP tracker for consistency.
+The `deal-diligence-planner` generates this; `diligence-coordinator` runs it. Create in the deal's
+private Corp Dev Spaces folder. Mirrors the closing-planner's CP tracker for consistency.
 
 ## Tab 1: `Diligence Tracker`
 

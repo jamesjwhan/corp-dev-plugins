@@ -1,8 +1,7 @@
 # Asset — Integration Performance Dashboard (Google Sheet schema)
 
-The `deal-integration-plan` **drafts content against this schema and asks the human to approve creating
-the sheet** — it does not create it in Corp Dev Spaces / Drive on its own. Once approved and created,
-`integration-tracker` runs the cadence on it. Share with the IWG + Exec Sponsor.
+The `deal-integration-plan` generates this; `integration-tracker` runs the cadence on it. Create in
+the deal's Corp Dev Spaces folder; share with the IWG + Exec Sponsor.
 
 ## Tab 1: `OKRs`
 | Column | Type | Notes |

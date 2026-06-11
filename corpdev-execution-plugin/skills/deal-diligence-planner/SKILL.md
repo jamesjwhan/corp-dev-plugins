@@ -28,13 +28,10 @@ This skill is the diligence half of a planner→coordinator pair: it *generates*
 2. **Not legal, tax, or financial advice.** The plan scopes *what to examine* and *who owns it*; the
    functional DRIs and specialist skills (`financial-diligence`) do the actual analysis and form the
    conclusions.
-3. **No unilateral shared-system writes.** The skill drafts the tracker against its schema but does
-   **not** create Google Sheets or write to Corp Dev Spaces / Drive on its own. It presents the draft
-   and asks the human to approve creating the sheet (or to create it themselves).
-4. **Clean-team discipline.** Technical diligence runs under a clean-team protocol (see the technical
+3. **Clean-team discipline.** Technical diligence runs under a clean-team protocol (see the technical
    module). Respect it in the plan — don't route sensitive code/IP to people who'd build the same
    thing if the deal dies.
-5. **Confidentiality.** Live deal = MNPI. Keep outputs in the deal's private workspace; restrict to
+4. **Confidentiality.** Live deal = MNPI. Keep outputs in the deal's private workspace; restrict to
    the tent roster.
 
 ---
@@ -100,11 +97,11 @@ For each in-scope module, pull its request-list items, **trim to what this deal 
 Tie each P0 item back to the assertion it tests. Flag long-lead items (full security review,
 all-employee interviews for large teams).
 
-### Step 5 — Draft the diligence status tracker
-Draft the tracker content against `assets/dd-tracker-schema.md` and present it (as a table) for review.
-**Do not create the Google Sheet yourself** — ask the human to approve creating it, or to create it.
-Once it exists, this is the artifact `diligence-coordinator` runs. Mirrors the closing-planner's
-tracker shape for consistency.
+### Step 5 — Build the diligence status tracker
+Draft the tracker content using the schema in `assets/dd-tracker-schema.md` — one row per request
+item. **Creating the Google Sheet itself is a human-approved step:** the Deal Lead (or
+`diligence-coordinator`, once approved) creates it in the deal's private Corp Dev Spaces folder.
+Mirrors the closing-planner's tracker shape for consistency.
 
 ### Step 6 — Present for human review
 Surface to the Deal Lead before any request goes out: archetype, workstreams in/light/out, the P0
@@ -133,8 +130,8 @@ Modules are authored once and reused. Extend the module file to add coverage; do
 Two artifacts in the deal's private workspace:
 1. **Confirmatory diligence plan** (Markdown in Corp Dev Spaces) — archetype, workstreams in/light/out,
    request lists with DRIs, P0/P1/P2 mapped to assertions, long-lead flags.
-2. **Diligence status tracker** — drafted against the schema and presented for approval; created in
-   Google Sheets only on the human's go-ahead. Once created, it's the live artifact for `diligence-coordinator`.
+2. **Diligence status tracker** — drafted from the schema for review; the Google Sheet is created
+   on human sign-off, then run by `diligence-coordinator`.
 
 Name the handoff: "Plan ready for review. On sign-off, `diligence-coordinator` runs the request list
 to closure and surfaces blockers at the diligence cadence."

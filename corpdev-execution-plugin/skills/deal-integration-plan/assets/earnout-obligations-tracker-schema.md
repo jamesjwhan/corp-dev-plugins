@@ -1,8 +1,7 @@
 # Asset — Earnout / Post-Close Obligations Tracker (Google Sheet schema)
 
-Optional — draft when the deal has an earnout, holdback, or material post-close obligations. The skill
-**drafts content against this schema and asks the human to approve creating the sheet** — it does not
-create it in Drive on its own. DRI: **Finance** (with Corp Dev).
+Optional — generate when the deal has an earnout, holdback, or material post-close obligations. DRI:
+**Finance** (with Corp Dev). Create in the deal workspace.
 
 ## Tab 1: `Earnout`
 | Column | Type | Notes |

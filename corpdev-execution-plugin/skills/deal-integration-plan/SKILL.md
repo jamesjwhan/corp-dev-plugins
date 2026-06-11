@@ -21,10 +21,7 @@ tracking / dashboard — plus the optional earnout/obligations tracker.
 ## Critical guardrails — read first
 
 1. **Drafts and surfaces only.** Produces the plan, OKRs, and dashboard. The `integration-tracker`
-   agent runs the cadence but does not take action or report externally without human approval. This
-   includes **creating shared artifacts**: the skill drafts the dashboard against its schema but does
-   **not** create the Google Sheet or write to Corp Dev Spaces / Drive on its own — it presents the
-   draft and asks the human to approve creating it.
+   agent runs the cadence but does not take action or report externally without human approval.
 2. **OKRs derive from the thesis, not from activity.** Resist listing tasks as objectives. An OKR is a
    measurable outcome that proves the thesis ("acquired product live to 500 Toast customers by month
    6"), not "complete the integration." Tie every objective to a Deal Memo assertion.
@@ -68,19 +65,18 @@ Translate objectives into OKRs with the Roadmap DRI (Product) + Engagement DRI (
   and **integration milestones** as KRs.
 Keep it tight — an integration with 12 objectives has none.
 
-### Step 4 — Draft the performance dashboard
-Draft the dashboard against `assets/integration-dashboard-schema.md`: OKR/KR tracking with RAG status,
-plus the financial/business metrics that matter for this deal (e.g., acquired-product adoption, revenue
-contribution, cost synergies, retention). **Do not create the Google Sheet yourself** — present the
-draft and ask the human to approve creating it, or to create it. Set the cadence: **2–3×/week for the
+### Step 4 — Build the performance dashboard
+Draft the dashboard content (schema: `assets/integration-dashboard-schema.md`) — the Google Sheet
+is created on human approval: OKR/KR tracking with
+RAG status, plus the financial/business metrics that matter for this deal (e.g., acquired-product
+adoption, revenue contribution, cost synergies, retention). Set the cadence: **2–3×/week for the
 first 30 days, then weekly.**
 
-### Step 5 — (Optional) draft the obligations tracker
+### Step 5 — (Optional) wire the obligations tracker
 If the deal has an earnout, holdback, or material post-close obligations, draft the
-earnout/obligations tracker against `assets/earnout-obligations-tracker-schema.md`: earnout milestones
-+ payout schedule, NWC true-up (60–90 days), escrow-release schedule, indemnity survival, post-close
-tax elections. **Do not create the Google Sheet yourself** — present the draft and ask the human to
-approve creating it. DRI: Finance.
+earnout/obligations tracker content (`assets/earnout-obligations-tracker-schema.md`): earnout milestones +
+payout schedule, NWC true-up (60–90 days), escrow-release schedule, indemnity survival, post-close
+tax elections. DRI: Finance.
 
 ### Step 6 — Present + hand off
 Surface the plan, OKRs, and dashboard to the Exec Sponsor + IWG for sign-off. On approval,
@@ -95,6 +91,7 @@ Surface the plan, OKRs, and dashboard to the Exec Sponsor + IWG for sign-off. On
 - `assets/earnout-obligations-tracker-schema.md` — optional post-close obligations sheet
 
 ## Output
-Integration plan + OKR set + performance dashboard (drafted against the schema; created in Google
-Sheets only on human approval), in the deal's workspace. Once created, `integration-tracker` runs the
-cadence from here. Drafts/surfaces only — the team and execs own the decisions and the external reporting.
+Integration plan + OKR set + performance dashboard (drafted from the schema; the Sheet is created
+on human approval), in the deal's workspace.
+`integration-tracker` runs the cadence from here. Drafts/surfaces only — the team and execs own the
+decisions and the external reporting.

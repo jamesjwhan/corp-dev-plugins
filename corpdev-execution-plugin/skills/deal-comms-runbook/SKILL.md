@@ -20,10 +20,7 @@ a light internal-plus-customer plan with no 8-K; a material platform deal gets f
 
 1. **Drafts plans and assets only — never publishes, files, or sends.** Every external action
    (press release, 8-K filing, customer email, social post) is drafted and routed to its named DRI
-   for approval. This includes **creating shared artifacts**: the skill drafts the comms tracker
-   against its schema but does **not** create the Google Sheet or write to Corp Dev Spaces / Drive on
-   its own — it presents the draft and asks the human to approve creating it. The skill builds the
-   plan and the drafts; humans push the buttons.
+   for approval. The skill builds the plan and the drafts; humans push the buttons.
 2. **MNPI until announced.** A pending deal is material non-public information. Keep all comms work in
    the deal's private workspace. Pre-announcement, even internal distribution is tent-only.
 3. **Gun-jumping / Reg FD awareness.** If HSR-reportable, no public posture that implies integration
@@ -81,10 +78,9 @@ market hours, and the go/no-go checkpoints.
 From `references/leak-rumor-playbook.md`: holding statements, escalation tree, monitoring plan.
 Active through the **entire** sign-to-close window (leak risk peaks during a deferred close).
 
-### Step 6 — Draft the comms tracker + present
-Draft the comms tracker against `assets/comms-tracker-schema.md` (assets, DRIs, status, approval
-state) and present the full plan to the deal sponsor + Comms lead for sign-off. **Do not create the
-Google Sheet yourself** — ask the human to approve creating it, or to create it. Nothing publishes
+### Step 6 — Produce the comms tracker + present
+Draft the comms tracker content (schema: `assets/comms-tracker-schema.md`) — assets, DRIs, status,
+approval state. **Creating the Google Sheet itself is a human-approved step.** Present the full plan to the deal sponsor + Comms lead for sign-off. Nothing publishes
 without approval.
 
 ---
@@ -98,7 +94,7 @@ without approval.
 - `assets/comms-tracker-schema.md` — Google Sheet (assets, DRIs, status, approval)
 
 ## Output
-Comms plan + run-of-show + comms tracker (drafted against the schema; created in Google Sheets only on
-human approval), all in the deal's private workspace. Drafts only — publication, filing, and sends are
-human-approved. Coordinates with `integration-tracker` so the announcement fires at the close gate (or
-at signing for same-day).
+Comms plan + run-of-show + comms tracker drafted from the schema (the Google Sheet is created on
+human sign-off), all in the deal's private workspace. Drafts
+only — publication, filing, and sends are human-approved. Coordinates with `integration-tracker` so
+the announcement fires at the close gate (or at signing for same-day).

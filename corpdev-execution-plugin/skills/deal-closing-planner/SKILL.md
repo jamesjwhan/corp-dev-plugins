@@ -24,10 +24,8 @@ This skill maps to **Stage 6 — Sign-to-Close** of the Toast Deal Operating Map
 1. **Drafts and surfaces only.** This skill (and the `integration-tracker` agent that runs its
    output) produces plans, trackers, and draft documents. It does **not** file HSR, send consent
    requests, execute wires or funds flow, or send comms. Every action that touches the outside
-   world or moves money is routed to a named human DRI for approval. This includes **creating shared
-   artifacts**: the skill drafts the tracker against its schema but does **not** create Google Sheets
-   or write to Corp Dev Spaces / Drive on its own — it presents the draft and asks the human to
-   approve creating the sheet (or to create it themselves). State this when presenting the plan.
+   world or moves money is routed to a named human DRI for approval. State this to the user when
+   presenting the plan.
 2. **Not legal or tax advice.** Regulatory flags — HSR reportability above all — are *preliminary
    triage for counsel to confirm*, never a determination. Legal instruments (definitive agreements,
    stockholder package, 280G/FIRPTA certificates) are tracked as required items but are **owned and
@@ -101,11 +99,11 @@ item on the timeline relative to **sign** and **close**. Mark each item's **type
 P2 fast-follow). Long-lead items (PPA/intangibles valuation, immigration transfers, HSR waiting
 period) get flagged to start at signing.
 
-### Step 5 — Draft the CP tracker
-Draft the tracker content against `assets/cp-tracker-schema.md` — one row per condition/item, with the
-schema's columns — and present it (as a table) for review. **Do not create the Google Sheet yourself.**
-Ask the human to approve creating it in the deal's workspace, or to create it themselves. Once it
-exists, this is the artifact `integration-tracker` runs.
+### Step 5 — Build the CP tracker
+Draft the CP tracker content using the schema in `assets/cp-tracker-schema.md`. **Creating the
+Google Sheet itself is a human-approved step** (Deal Lead, or `integration-tracker` post-approval).
+This is the artifact `integration-tracker` runs. One row per condition/item; columns for workstream, item, type, DRI,
+priority, status, due (relative to sign/close), and blockers.
 
 ### Step 6 — Present for human review
 Surface the plan and tracker to the Deal Lead **before** anything is created in shared systems or
@@ -138,8 +136,8 @@ extend the module file — not this SKILL.md.
 Two artifacts, both in the deal's private workspace:
 1. **Sign-to-close plan** (Markdown in Corp Dev Spaces) — archetype, modules in/out, workstreams
    with DRIs and timeline, P0/P1/P2, long-lead flags.
-2. **CP tracker** — drafted against the schema and presented for approval; created in Google Sheets
-   only on the human's go-ahead. Once created, it's the live execution artifact for `integration-tracker`.
+2. **CP tracker** — drafted from the schema for review; the Google Sheet is created on human
+   sign-off, then run by `integration-tracker`.
 
 Close the loop by naming the handoff: "Plan ready for review. On sign-off, `integration-tracker`
 takes the CP tracker from here and runs it to close."

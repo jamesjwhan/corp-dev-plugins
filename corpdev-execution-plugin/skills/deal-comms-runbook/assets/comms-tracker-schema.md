@@ -1,8 +1,7 @@
 # Asset — Comms Tracker (Google Sheet schema)
 
-The `deal-comms-runbook` **drafts content against this schema and asks the human to approve creating
-the sheet** — it does not create it in Corp Dev Spaces / Drive on its own. Once approved and created,
-Comms runs it and `integration-tracker` references it at the close gate.
+The `deal-comms-runbook` generates this; Comms runs it; `integration-tracker` references it at the
+close gate. Create in the deal's private workspace.
 
 ## Tab 1: `Asset Tracker`
 | Column | Type | Notes |

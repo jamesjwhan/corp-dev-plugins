@@ -1,8 +1,7 @@
 # Asset — CP Tracker (Google Sheet schema)
 
-The `deal-closing-planner` **drafts content against this schema and asks the human to approve creating
-the sheet** — it does not create it in Corp Dev Spaces / Drive on its own. Once approved and created,
-`integration-tracker` runs it. One row per condition / readiness item.
+The `deal-closing-planner` generates this sheet; `integration-tracker` runs it. Create it in the
+deal's private Corp Dev Spaces folder. One row per condition / readiness item.
 
 ## Tab 1: `CP Tracker`
 
