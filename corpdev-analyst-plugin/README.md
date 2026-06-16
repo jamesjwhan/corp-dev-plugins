@@ -1,11 +1,11 @@
-# corp-dev-analyst
+# corpdev-analyst
 
-Corporate development analyst plugin for Claude Code. Provides the `corp-dev-analyst` agent and a full suite of research and diligence skills for M&A sourcing, deal evaluation, and strategic intelligence.
+Corporate development analyst plugin for Claude Code. Provides the `corpdev-analyst` agent and a full suite of research and diligence skills for M&A sourcing, deal evaluation, and strategic intelligence.
 
 ## Components
 
 ### Agent
-- **corp-dev-analyst** — Senior corp dev analyst agent. Proactively surfaces acquisition targets, evaluates opportunities, orchestrates downstream research skills, and delivers executive-ready recommendations. Triggers reactively (user asks for analysis) and proactively (new signals from CRM or briefings).
+- **corpdev-analyst** — Senior corp dev analyst agent. Proactively surfaces acquisition targets, evaluates opportunities, orchestrates downstream research skills, and delivers executive-ready recommendations. Triggers reactively (user asks for analysis) and proactively (new signals from CRM or briefings).
 
 ### Skills
 
@@ -33,7 +33,7 @@ Corporate development analyst plugin for Claude Code. Provides the `corp-dev-ana
 **Step 2 — Install this plugin:**
 
 ```bash
-/plugin install corp-dev-analyst@corp-dev-plugins
+/plugin install corpdev-analyst@corp-dev-plugins
 ```
 
 **Step 3 — Reload plugins in the current session:**
@@ -47,7 +47,7 @@ Corporate development analyst plugin for Claude Code. Provides the `corp-dev-ana
 To share across your whole repo (adds to `.claude/settings.json`):
 
 ```bash
-/plugin install corp-dev-analyst@corp-dev-plugins --scope project
+/plugin install corpdev-analyst@corp-dev-plugins --scope project
 ```
 
 ## Prerequisites
