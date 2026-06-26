@@ -20,6 +20,7 @@ James triggers this with minimal input. Optional overrides:
 - **Lookback window**: how far back to scan (default: 7 days; "last 30 days" extends it)
 - **Priority filter**: default scans P0/P1 deeply + P2 lightly; "P1 only" narrows; "all" includes P3
 - **Company filter**: "check signals for HiAuto" focuses on one company
+- **Market pulse output** *(optional)*: structured output from a prior crm-market-pulse run. When passed by the crm-auto-updater or from a cowork daily schedule, Phase 4 uses it as the newsletter/web signal layer for CRM companies already mentioned — avoiding duplicate scanning of the same sources.
 ---
  
 ## Phase 1: Load the Company Watch List (CRM reference only)
@@ -116,8 +117,10 @@ If PitchBook MCP is unavailable, skip this phase entirely and note the gap.
 ---
  
 ## Phase 4: Curated Newsletters & Media
- 
-Don't run a generic web search. Instead, search specifically within a curated list of high-signal sources that cover tech deals, venture, and restaurant/hospitality tech.
+
+**If market pulse output was passed as input:** Extract any mentions of CRM watch-list companies from that output and treat them as Phase 4 signals (tag as `[from market pulse]`). For companies already surfaced by market pulse, skip the redundant per-company web searches in 4a/4b/4c — use the market pulse item as the citation instead. Still run PitchBook (Phase 3) and internal sources (Phase 2) normally.
+
+**If no market pulse output is available:** Don't run a generic web search. Instead, search specifically within a curated list of high-signal sources that cover tech deals, venture, and restaurant/hospitality tech.
  
 ### 4a. Newsletter & Publication Sources
  

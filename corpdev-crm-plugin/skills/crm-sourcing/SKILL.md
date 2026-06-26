@@ -24,6 +24,7 @@ Minimal input required. James can optionally override:
 - **Vertical filter**: "focus on Voice AI" or "restaurant tech only"
 - **Construct filter**: "M&A targets only" or "investment candidates only"
 - **Lookback window**: how far back to scan for new announcements (default: 30 days)
+- **Market pulse output** *(optional)*: structured output from a prior crm-market-pulse run. When passed by the crm-auto-updater or from a cowork daily schedule, Phase 2 is satisfied from this input and crm-market-pulse is not re-invoked.
 
 Stage is shown on context cards as informational context, not used as a filter. Seed-stage companies are always included — they're often the most interesting M&A or early investment targets.
 
@@ -56,9 +57,14 @@ This file contains:
 
 ## Phase 2: Market Pulse
 
-Run the `crm-market-pulse` skill with a **30-day lookback window** to identify where activity is highest in Toast's focus verticals before beginning company discovery. Use the output to weight Phase 3 — sub-verticals with the most deal-making and funding activity get the deepest search effort.
+Use market pulse output to identify where activity is highest in Toast's focus verticals before beginning company discovery. Use the output to weight Phase 3 — sub-verticals with the most deal-making and funding activity get the deepest search effort.
 
-**If crm-market-pulse has already been run in this session** and its output is available in context, use it directly rather than re-running.
+**Source priority (check in order):**
+1. If a `market_pulse_output` was passed as input (e.g., from the crm-auto-updater or a cowork daily schedule), use it directly — do not invoke crm-market-pulse.
+2. If crm-market-pulse has already been run in this session and its output is visible in context, use it directly.
+3. Otherwise, invoke `crm-market-pulse` with a **30-day lookback window** and use its output.
+
+Never invoke `crm-market-pulse` more than once in the same session.
 
 Market Pulse output feeds Phase 3 as a weighting signal:
 > "Based on market pulse, highest activity in: [sub-vertical 1], [sub-vertical 2]. Key themes: [theme 1], [theme 2]. Prioritizing these in company discovery."
